@@ -979,6 +979,7 @@
                 groupPaths.enter().append("path")
                     .merge(groupPaths)
                     .style("fill", d => colorScale(currencies[d.index]))
+                    .attr("d", arc)
                     .on("mouseover", function(event, d) {
                         highlightSymbol(currencies[d.index]);
                         showSymbolTooltip(event, currencies[d.index], d);
